@@ -51,7 +51,7 @@ The *Wildfire Simulator* uses input files to initialize the forest environment, 
 
 ### Command Line Arguments
 
-- `--map <path_to_xml>`: Specifies the XML file defining the forest map.
+- `--map-file <path_to_xml>`: Specifies the XML file defining the forest map.
 - `--tEnd <time>`: Sets the simulation end time (default is 1000s).
 - `--dtMap <interval>`: Time interval for saving fire spread maps (default is 10s).
 - `--dtLog <interval>`: Time interval for writing log files (default is 10s).
@@ -62,7 +62,7 @@ The *Wildfire Simulator* uses input files to initialize the forest environment, 
 ### Example
 
 ```bash
-./wildfire_simulator --map forest_map.xml --tEnd 2000 --dtMap 50 --dtLog 50 --dtScreen 10 --Co 0.5 --outputFolder results/
+WildFireSimulator --map forest_map.xml --tEnd 2000 --dtMap 50 --dtLog 50 --dtScreen 10 --Co 0.5 --outputFolder results/
 ```
 
 This will run the simulation with the specified settings, using the forest map provided in `forest_map.xml` and saving results to the `results/` folder.
@@ -94,6 +94,12 @@ Ensure that you have the necessary dependencies installed:
 
 - **Boost**: For file handling, property trees, and command-line options.
 - **Eigen**: For matrix operations.
+
+To run a simple test, enter the `examples` folder and run the solver choosing the `map_100x100.xml` file included in the `maps` folder:
+
+```bash
+WildFireSimulator --map maps/map_100x100.xml
+```
 
 ---
 
