@@ -1,35 +1,71 @@
-# Prerequisites
-*.d
+# Ignore build directories
+/build/
+/Build/
+/build-*/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Ignore CMake generated files
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# Ignore output binaries and libraries
 *.exe
 *.out
 *.app
+*.log
+*.a
+*.lib
+*.so
+*.dylib
 
-# Build directories
-*build*
+# Ignore user-specific or temporary files
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# Ignore compile commands
+compile_commands.json
+
+# Ignore debugging files
+*.dSYM/
+*.stackdump
+*.core
+*.pch
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+.clangd/
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Windows specific files
+Thumbs.db
+Desktop.ini
+
+# Ignore generated documentation
+/docs/
+/doc/
+/*.html
+/*.pdf
+
+# Ignore specific cache or config files
+*.pyc
+*.pyo
+*.pdb
+
+# Ignore boost-related build files
+boost/
+
+# Ignore generated VTK/Tecplot files from the project
+*.vtk
+*.tec
+
+# Ignore custom log and output files
+Solution.out
+Output/

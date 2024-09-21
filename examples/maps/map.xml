@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example Map Configuration for Wildfire Simulator
+  This XML file defines a map with the following attributes:
+  - Grid dimensions (nx, ny)
+  - Cell sizes (deltax, deltay)
+  - Elevation, land use, wind fields, and vegetation density
+
+    Land Use Types (values for the landuse field):
+    - WATER = 0
+    - BUILDINGS = 1
+    - ROCKS = 2
+    - BROADLEAVES = 10
+    - SHRUBS = 11
+    - GRASSLAND = 12
+    - TROPICALGRASSLAND = 13
+    - MEDITERRANEANWOODLAND = 14
+    - FIREPRONECONIFERS = 20
+    - AGROFORESTRY = 21
+    - NOTFIREPRONEFORESTRY = 22
+    - ALPINEFOREST = 23
+    - SAVANNA = 30
+    - TAIGA = 31
+    - TUNDRA = 32
+    - PEATLANDS = 40
+-->
+
+<map>
+    <!-- Number of grid cells along the x-axis (East-West) -->
+    <nx>100</nx>
+    
+    <!-- Number of grid cells along the y-axis (North-South) -->
+    <ny>100</ny>
+
+    <!-- Size of each grid cell in the x-direction (in meters) -->
+    <deltax>10.</deltax>
+
+    <!-- Size of each grid cell in the y-direction (in meters) -->
+    <deltay>10.</deltay>
+
+    <!-- 
+      Elevation map:
+      - nx: number of cells in the x-direction for the elevation grid
+      - ny: number of cells in the y-direction for the elevation grid
+      - Values represent the elevation in meters
+      - To provide uniform values, set nx and ny equal to 1
+    -->
+    <elevation nx="1" ny="1">
+        0
+    </elevation>
+
+    <!-- 
+      Land use map:
+      - nx: number of cells in the x-direction for the land use grid
+      - ny: number of cells in the y-direction for the land use grid
+      - Values represent land use types (e.g., 20 = grassland)
+      - To provide uniform values, set nx and ny equal to 1
+    -->
+    <landuse nx="1" ny="1">
+        20
+    </landuse>   
+
+    <!-- 
+      Wind field in the x-direction:
+      - nx: number of cells in the x-direction for the wind speed grid
+      - ny: number of cells in the y-direction for the wind speed grid
+      - Values represent the wind speed in m/s (positive values indicate wind blowing East)
+      - To provide uniform values, set nx and ny equal to 1
+    -->
+    <windx nx="1" ny="1">
+        0.
+    </windx>    
+
+    <!-- 
+      Wind field in the y-direction:
+      - nx: number of cells in the x-direction for the wind speed grid
+      - ny: number of cells in the y-direction for the wind speed grid
+      - Values represent the wind speed in m/s (positive values indicate wind blowing North)
+      - To provide uniform values, set nx and ny equal to 1
+    -->
+    <windy nx="1" ny="1">
+        0.
+    </windy>   
+
+    <!-- 
+      Vegetation density map:
+      - nx: number of cells in the x-direction for the density grid
+      - ny: number of cells in the y-direction for the density grid
+      - Values represent the vegetation density (1.0 = regular density, greater than 1 = denser)
+      - To provide uniform values, set nx and ny equal to 1
+    -->
+    <density nx="1" ny="1">
+        1.
+    </density>     
+
+</map>
